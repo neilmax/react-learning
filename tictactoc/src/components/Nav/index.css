@@ -1,0 +1,44 @@
+
+.nav-container{
+
+    /* size */
+    width: 100%;
+
+    /* format */
+    background-color: azure;
+
+    /* position */
+    position: fixed;
+    top: 0%;
+
+}
+
+.nav-header{
+    height: 90px;
+    max-width: 800px;
+    width: 100%;
+
+    /* layout */
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    
+    /* margin: 0 auto 0 auto */
+    margin: 0 auto;
+}
+
+.sitename{
+    /* layout */
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: black;
+    padding: 5px 0;
+
+    /* format */
+    font-size: 32px;
+    font-weight: 600;
+    color: darkslateblue;
+
+    
+}

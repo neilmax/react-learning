@@ -1,0 +1,31 @@
+
+.article-item{
+
+    padding: 15px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    vertical-align: middle;
+    margin: 10px;
+
+}
+
+.article-title{
+
+}
+
+.article-time {
+  display: block;
+  color: #999;
+  font-size: 13px;
+  padding: 0 15px;
+  /* 通过增加左边界来产生引用的效果 */
+  border-left: 4px solid #ddd;
+  line-height: 2;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+
+.article-content{
+
+}
