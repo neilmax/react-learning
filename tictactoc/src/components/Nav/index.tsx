@@ -10,6 +10,9 @@ const Nav: React.SFC<NavProps> = props => (
   <div className="nav-container">
     <div className="nav-header">
       <div className="sitename">{props.siteName}</div>
+      <div className="subSite">
+        <a href="#/detail">Details</a>
+        </div>
       <div className="username">{props.userName}</div>
     </div>
   </div>

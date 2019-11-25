@@ -11,8 +11,8 @@ const App: React.FC = () => {
   return (
     <div className="layout-container">
       {/* {nav} */}
-      {/* <Nav siteName="ShaaaaaaW" userName="Young Shaw" /> */}
-      <StrapNav />
+      <Nav siteName="ShaaaaaaW" userName="Young Shaw" />
+      {/* <StrapNav /> */}
       {/* {home} */}
       <Home />
       {/* {footer} */}
