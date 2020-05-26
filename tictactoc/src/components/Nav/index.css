@@ -5,7 +5,7 @@
     width: 100%;
 
     /* format */
-    background-color: azure;
+    background-color: rgb(223, 243, 243);
 
     /* position */
     position: fixed;
@@ -30,15 +30,15 @@
 
 .sitename{
     /* layout */
-    border-width: 2px 0;
-    border-style: solid none;
-    border-color: black;
-    padding: 5px 0;
+    /* border-width: 2px 0;
+    border-style: solid none; */
+    /* border-color: black;
+    padding: 5px 0; */
 
     /* format */
     font-size: 32px;
     font-weight: 600;
-    color: darkslateblue;
+    color: royalblue;
 
     
 }

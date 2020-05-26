@@ -8,7 +8,7 @@ axios.defaults.baseURL = '/api';
 
 
 
-const Register = () => {
+const RegisterForm = () => {
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
 
@@ -17,7 +17,7 @@ const Register = () => {
     const loginRequest = () => {
 
         axios.request({
-            url:"/register",
+            url:"/entry/register",
             method:"post",
             data:{
                 username: name,
@@ -67,4 +67,4 @@ const Register = () => {
     );
 };
 
-export default Register;
+export default RegisterForm;

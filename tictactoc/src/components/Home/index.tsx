@@ -13,6 +13,8 @@ const Home: React.SFC = () => {
   const [page, setPage] = useState<number>(0);
   const [isEnd, setIsEnd] = useState<boolean>(false);
 
+
+
   let myArticle: IArticle = {
     title: "title",
     createTime: new Date().getTime(),
@@ -69,6 +71,7 @@ const Home: React.SFC = () => {
             <Button color="primary" onClick={loadmore}>
               点击加载更多
             </Button>
+            {/* <p>{storage.username}</p> */}
           </div>
         )}
       </div>

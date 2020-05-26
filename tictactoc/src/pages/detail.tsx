@@ -4,11 +4,13 @@ import axios from 'axios';
 import {Button} from 'reactstrap'
 
 axios.defaults.baseURL = '/api';
+// axios.defaults.baseURL = '/movie';
 
 const askSpring = () =>{
     axios
     .request({
-        url:"/demo"
+        url:"/movie/add",
+        method:"GET"
     })
     .then(res=>{
         const resData = res.data;

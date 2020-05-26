@@ -17,3 +17,58 @@ export interface IListResponse<T = any>{
     current: number;
     total: number;
 }
+
+export interface IMovie{
+    id: string;
+    name: string;
+    label: string;
+}
+
+export interface IMovieInfo{
+    movieId: string;
+    movieTitle: string;
+    releaseDate: string;
+    videoReleaseDate: string;
+    imdbUrl: string;
+    unknown: string;
+    action: string;
+    adventure: string;
+    animation: string;
+    children: string;
+    comedy: string;
+    crime: string;
+    documentary: string;
+    drama: string;
+    fantasy: string;
+    filmnoir: string;
+    horror: string;
+    musical: string;
+    mystery: string;
+    romance: string;
+    scifi: string;
+    thriller: string;
+    war: string;
+    western: string;
+}
+
+export interface UserInfo{
+    userid: string;
+    age: number;
+    gender: string;
+    occupation: string;
+    zipcode: string;
+}
+
+export interface UserRating{
+    userid: string;
+    itemid: string;
+    rating: number;
+    timestamp: string;
+}
+
+export interface MovieAndRating{
+    movieId: string;
+    movieTitle: string;
+    releaseDate: string;
+    rating: number;
+}

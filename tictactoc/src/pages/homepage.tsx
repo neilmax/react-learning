@@ -7,15 +7,16 @@ import Nav from "../components/Nav";
 import Home from "../components/Home";
 
 const HomePage: React.FC = () => {
+  let storage = window.localStorage;
   return (
     <div className="layout-container">
       {/* {nav} */}
-      <Nav siteName="ShaaaaaaW" userName="Young Shaw" />
+      <Nav siteName="电影推荐系统" userName={storage.username} />
       {/* <StrapNav /> */}
       {/* {home} */}
-      <Home />
+      {/* <Home />
       {/* {footer} */}
-      <Footer copyright="ShawForeveryoung" />
+      {/* <Footer copyright="ShawForeveryoung" />  */}
     </div>
   );
 };

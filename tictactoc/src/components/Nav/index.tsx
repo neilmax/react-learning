@@ -11,9 +11,21 @@ const Nav: React.SFC<NavProps> = props => (
     <div className="nav-header">
       <div className="sitename">{props.siteName}</div>
       <div className="subSite">
-        <a href="#/detail">Details</a>
-        </div>
-      <div className="username">{props.userName}</div>
+        <a href="#/homepage">首页</a>
+      </div>
+      <div className="subSite">
+        <a href="#/favorite">用户信息</a>
+      </div>
+      
+      <div className="subSite">
+        <a href="#/searchmovie">电影信息</a>
+      </div>
+
+      <div className="subSite">
+        <a href="#/updatemovie">添加电影</a>
+      </div>
+
+      {/* <div className="username">当前用户：{props.userName}</div> */}
     </div>
   </div>
 );

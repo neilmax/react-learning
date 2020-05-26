@@ -1,0 +1,10 @@
+.searchmovie-container{
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.loadmore{
+    text-align: left;
+    margin: 24px auto;
+}

@@ -5,7 +5,7 @@ import axios from 'axios';
 import useReactRouter from "use-react-router"
 import {Link} from "react-router-dom"
 
-axios.defaults.baseURL = '/api';
+// axios.defaults.baseURL = '/api';
 
 interface LoginProps {
     func: string;
@@ -18,17 +18,21 @@ const Login: React.SFC<LoginProps> = (props) => {
     const {history, location, match} = useReactRouter();
 
     const loginRequest = () => {
-
+        let storage = window.localStorage;
         axios.request({
-            url:"/login",
+            url:"/entry/login",
             method:"post",
             data:{
                 username: name,
                 password: password,
             },
         }).then(res=>{
-            console.log('post', res.data);
-            history.push(res.data);
+            let page :string = res.data;
+            console.log('post', page);
+            if(page=="/homepage"){
+                storage.username = name;
+            }
+            history.push(page);
             // createBrowserHistory().push("#"+res.data);
         });
     };
@@ -40,10 +44,9 @@ const Login: React.SFC<LoginProps> = (props) => {
         <div>
         <Jumbotron fluid>
             <Container fluid>
-            <h1 className="display-3">Hello, world!</h1>
-                <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
+            <h1 className="display-3">电影推荐系统</h1>
+                <p className="lead">使用Spring Boot+React编写的前后端分离电影推荐界面</p>
                 <hr className="my-2" />
-                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
             </Container>
         </Jumbotron>
 
@@ -59,11 +62,14 @@ const Login: React.SFC<LoginProps> = (props) => {
                     <Label for="password">密码</Label>
                     <Input type="password" name="password" onChange={e=>setPassword(e.target.value)} placeholder="请输入密码" required />
                 </FormGroup>
-                <Button onClick={loginRequest}>{props.func}</Button>
-                <Button>
-                    <Link to="/register">注册</Link>
-                </Button>
-                <a href="#/homepage">Homepage</a>
+                <div className='func-btn'>
+                    <Button onClick={loginRequest}>{props.func}</Button>
+                    <Button >
+                        <Link to="/register">注册</Link>
+                    </Button>
+                </div>
+                
+                {/* <a href="#/homepage">Homepage</a> */}
             </Form>
         </div>
         
